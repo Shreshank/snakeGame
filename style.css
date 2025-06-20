@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-image: url('https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?cs=srgb&dl=pexels-pixabay-147411.jpg&fm=jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container{
+    background-color: #63e536;
+    width: min(85vw , 85vh);
+    height: min(85vw , 85vh);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-box{
+    width: 5%;
+    height: 5%;
+    background-color: #63e536;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.change{
+    background-color: #419226;
+}
+
+.snake-body{
+    height: 90%;
+    width: 90%;
+    border-radius: 40%;
+    background-color: #fff;
+}
+
+.food{
+    height: 90%;
+    width: 90%;
+    border-radius: 40%;
+    background-color: #ff0000; 
+}
+
+.game-over{
+    font-size: 35px;
+    font-weight: bold;
+    color: red;
+}
+
+.btns{
+    width: 12vw;
+    height: 10vw;
+    position: relative;
+}
+
+.btns *{
+    position: absolute;
+    width: 4vw;
+    border-radius: 10px;
+    height: 8vh;
+    background-color: #71d0ff;
+}
+
+#up{
+    left: calc(50% - 2vw);
+    top: 0;
+}
+
+#right{
+    top: calc(50% - 4vh);
+    right: 0;
+}
+
+#left{
+    top: calc(50% - 4vh);
+    left: 0;
+}
+
+#down{
+    left: calc(50% - 2vw);
+    bottom: 0;
+}
+
+@media (max-width: 800px){
+    body{
+        flex-direction: column;
+    }
+    .btns{
+        width: 60vw;
+        height: 25vh;
+        position: relative;
+    }
+    .btns *{
+        width: 25vw;
+        height: 8vh;
+    }
+    #up{
+    left: calc(50% - 12.5vw);
+    top: 0;
+    }
+
+    #right{
+        top: calc(50% - 4vh);
+        right: 0;
+    }
+
+    #left{
+        top: calc(50% - 4vh);
+        left: 0;
+    }
+
+    #down{
+        left: calc(50% - 12.5vw);
+        bottom: 0;
+    }
+}
